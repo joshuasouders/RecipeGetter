@@ -1,0 +1,56 @@
+{ 
+	"recipies": [
+	{
+		"meal": "Monday Main", 
+		"url": "http://allrecipes.com/Recipe/Portobello-Mushroom-Burgers/Detail.aspx?event8=1&prop24=SR_Title&e11=mushroom%20burger&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i2"
+	},
+	{
+		"meal": "Monday Side", 
+		"url": "http://allrecipes.com/Recipe/Moms-Scalloped-Potatoes/Detail.aspx?event8=1&prop24=SR_Thumb&e11=scalloped%20potatoes&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i4&scale=5&ismetric=0"
+	},
+	{
+		"meal": "Tuesday Main", 
+		"url": "http://allrecipes.com/Recipe/Grilled-Asian-Chicken/Detail.aspx?evt19=1&referringHubId=1984&scale=2&ismetric=0"
+	},
+	{
+		"meal": "Tuesday Side", 
+		"url": "http://allrecipes.com/Recipe/Coconut-Lime-Rice/Detail.aspx?event8=1&prop24=SR_Thumb&e11=coconut%20rice&e8=Quick%20Search&event10=1&e7=Recipe%20Search%20Results&soid=sr_results_p1i4"
+	},
+	{
+		"meal": "Wednesday Main", 
+		"url": "http://allrecipes.com/Recipe/Creamy-Mushroom-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=portebello%20mushroom&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i5&scale=4&ismetric=0"
+	},
+	{
+		"meal": "Wednesday Side", 
+		"url": "http://allrecipes.com/Recipe/Sarahs-Rice-Pilaf/Detail.aspx?evt19=1&referringHubId=2822"
+	},
+	{
+		"meal": "Thursday Main", 
+		"url": "http://allrecipes.com/Recipe/Pork-Chops-with-Raspberry-Sauce/Detail.aspx?event8=1&prop24=SR_Thumb&e11=pork%20chops&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i2"
+	},
+	{
+		"meal": "Thursday Side", 
+		"url": "http://allrecipes.com/Recipe/Sweet-Potato-Casserole-II-3/Detail.aspx?event8=1&prop24=SR_Thumb&e11=sweet%20potatoes&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i5&scale=8&ismetric=0"
+	},
+	{
+		"meal": "Friday Main", 
+		"url": "http://allrecipes.com/Recipe/Cucumber-and-Avocado-Sushi/Detail.aspx?event8=1&prop24=SR_Thumb&e11=sushi&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i19&scale=9&ismetric=0"
+	},
+	{
+		"meal": "Friday Side 1", 
+		"url": "http://allrecipes.com/Recipe/Eel-Sauce/Detail.aspx?event8=1&prop24=SR_Thumb&e11=sushi&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i9&scale=3&ismetric=0"
+	},
+	{
+		"meal": "Friday Side 2", 
+		"url": "http://allrecipes.com/Recipe/Miso-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=miso%20soup&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1"	},
+
+	{
+		"meal": "Saturday Main", 
+		"url": "http://allrecipes.com/Recipe/Slow-Cooker-Chicken-Stroganoff/Detail.aspx?evt19=1&referringHubId=17253&scale=3&ismetric=0"
+	},
+	{
+		"meal": "Saturday Side 1", 
+		"url": "http://allrecipes.com/Recipe/Grilled-Garlic-Parmesan-Zucchini/Detail.aspx?evt19=1&referringHubId=2822&scale=3&ismetric=0"
+	}
+
+]}
