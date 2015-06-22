@@ -34,14 +34,19 @@ produce_list = [
     "fresh ginger",
     "tofu",
     "zucchini",
-    "parsley"
+    "parsley",
+    "lemon",
+    "asparagus",
+    "spinach"
 ]
 
 produce_exception_list = [
     "celery seed",
     "peeled and diced tomatoes with juice",
     "cornmeal",
-    "tomato juice"
+    "tomato juice",
+    "frozen spinach",
+    "dried parsley"
 ]
 
 frozen_list = [
@@ -108,7 +113,15 @@ middle_list = [
     "mirin",
     "dashi",
     "miso",
-    "dressing mix"
+    "dressing mix",
+    "skewer",
+    "barbeque sauce",
+    "bread",
+    "capers",
+    "sauce mix",
+    "pesto",
+    "pasta",
+    "macaroni"
 ]
 
 middle_exception_list = [
@@ -134,7 +147,14 @@ ignore_list = [
     "dried basil",
     "dried oregano",
     "cinamon",
-    "sage"
+    "sage",
+    "cooking spray",
+    "nutmeg",
+    "Worcestershire",
+    "dried parsley",
+    "vegetable oil",
+    "dried thyme",
+    "white vinegar"
 ]
 
 ignore_exceptions_list = [
@@ -184,7 +204,7 @@ def filter_check(ingredient, quantity, meal):
 def getCategorization(item):
     return item[4]
 
-with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies1.json') as recipies_file:
+with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as recipies_file:
     data = json.load(recipies_file)
     for recipe in data["recipies"]:
         print "==========="
@@ -194,7 +214,9 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies1.json') as rec
         print "Loaded recipe"
         print ""
 
-        htmlstr += "<h3>" + recipe["meal"] + ":&nbsp<a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h3>";
+        htmlstr += "<h3>" + recipe["meal"] + ":&nbsp<a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h3>"
+        if 'notes' in recipe:
+            htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
         ingredients = soup.find_all(id="liIngredient")
         
         for i in range(len(ingredients)):
@@ -258,6 +280,8 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies1.json') as rec
         soup = BeautifulSoup(urllib2.urlopen(recipe["url"]).read())
         htmlstr += "<h1><a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h1><h3>(" + recipe["meal"] + ")</h3>"
         htmlstr += soup.find(id="ulReadyTime").get_text()
+        if 'notes' in recipe:
+            htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
         htmlstr += "<h3>Ingredients</h3><div class=\"ingredients\">"
         
         ingredients = soup.find_all(id="liIngredient")
@@ -285,7 +309,7 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies1.json') as rec
             htmlstr += str(tag)
 
     htmlstr += "</div></body></html>"
-    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe1.html","w")
+    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe2.html","w")
     html_file.write(htmlstr)
     html_file.close()
     print "Recipies written to HTML file"
