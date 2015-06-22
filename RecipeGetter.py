@@ -3,7 +3,7 @@ import os
 import json
 from bs4 import BeautifulSoup
 
-htmlstr = '<html><head><style>.directLeft{text-align:left}.directions{width:50%;margin-left:25%;}.linkPrefersSupportingMembership{display:none;}.ingredients{text-align:left;width:50%;margin-left:25%;}ol{padding-left:20px}</style><!-- Latest compiled and minified CSS --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"><!-- Optional theme --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"><script src="http://code.jquery.com/jquery-1.11.3.min.js"></script><!-- Latest compiled and minified JavaScript --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script></head><body style="text-align:center"><h1>Recipes</h1>'
+htmlstr = '<html><head><!-- Latest compiled and minified CSS --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"><!-- Optional theme --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"><script src="http://code.jquery.com/jquery-1.11.3.min.js"></script><!-- Latest compiled and minified JavaScript --><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script><style>.highlight{background-color:#337AB7;}.directLeft{text-align:left}.directions{width:50%;margin-left:25%;}.linkPrefersSupportingMembership{display:none;}.ingredients{text-align:left;width:50%;margin-left:25%;}ol{padding-left:20px}</style></head><body style="text-align:center"><h1>Recipes</h1>'
 
 produce = []
 frozen = []
@@ -248,31 +248,31 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as rec
     print "Preparing to write to HTML"
     print ""
 
-    htmlstr += '<h1>Ingredients</h1><table style="width:100%" class="table table-striped table-hover"><tr><th style="text-align:center">Checkbox</th><th style="text-align:center">Quantity</th><th style="text-align:center">Ingredient</th><th style="text-align:center">Location</th><th style="text-align:center">Meal</th></tr>';
+    htmlstr += '<h1>Ingredients</h1><table style="width:100%" class="table"><tr><th style="text-align:center">Quantity</th><th style="text-align:center">Ingredient</th><th style="text-align:center">Location</th><th style="text-align:center">Meal</th></tr>';
      
     print "Writing Produce"
     for ingredient in sorted(produce, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     print "Writing Meat"
     for ingredient in sorted(meat, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     print "Writing Middle"
     for ingredient in sorted(middle, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     print "Writing Refrigerated"
     for ingredient in sorted(refrigerated, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     print "Writing Frozen"
     for ingredient in sorted(frozen, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     print "Writing Unknown Food"
     for ingredient in sorted(unknown, key=getCategorization):
-        htmlstr += "<tr><td style=\"text-align:center\"><input type=\"checkbox\"></td><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
+        htmlstr += "<tr><td>" + ingredient[0] + "</td><td>" + ingredient[1] + "</td><td>" + ingredient[2] + "</td><td>" + ingredient[3] + "</td></tr>"
 
     htmlstr += "</table><div style=\"text-align:center\">"
 
@@ -308,7 +308,7 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as rec
         for tag in soup.find_all("div", class_="directions"):
             htmlstr += str(tag)
 
-    htmlstr += "</div></body></html>"
+    htmlstr += "</div><script>$('.table').on('click','tbody tr',function(event){if($(this).hasClass('highlight')){$(this).removeClass('highlight');}else{$(this).addClass('highlight')}});</script></body></html>"
     html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe2.html","w")
     html_file.write(htmlstr)
     html_file.close()
