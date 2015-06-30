@@ -37,7 +37,8 @@ produce_list = [
     "parsley",
     "lemon",
     "asparagus",
-    "spinach"
+    "spinach",
+    "squash"
 ]
 
 produce_exception_list = [
@@ -62,7 +63,8 @@ meat_list = [
     "beef",
     "bacon",
     "chicken",
-    "pork"
+    "pork",
+    "turkey"
 ]
 
 meat_exception_list = [
@@ -121,7 +123,13 @@ middle_list = [
     "sauce mix",
     "pesto",
     "pasta",
-    "macaroni"
+    "macaroni",
+    "ketchup",
+    "cocoa",
+    "buns",
+    "artichoke hearts",
+    "gravy mix",
+    "mayonnaise"
 ]
 
 middle_exception_list = [
@@ -309,7 +317,7 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as rec
             htmlstr += str(tag)
 
     htmlstr += "</div><script>$('.table').on('click','tbody tr',function(event){if($(this).hasClass('highlight')){$(this).removeClass('highlight');}else{$(this).addClass('highlight')}});</script></body></html>"
-    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe2.html","w")
+    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe3.html","w")
     html_file.write(htmlstr)
     html_file.close()
     print "Recipies written to HTML file"

@@ -2,49 +2,50 @@
 	"recipies": [
 	{
 		"meal": "Monday Main", 
-		"url": "http://allrecipes.com/Recipe/Greek-Island-Chicken-Shish-Kebabs/Detail.aspx?event8=1&prop24=SR_Thumb&e11=chicken%20kebab&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i1&scale=3&ismetric=0"
+		"url": "http://allrecipes.com/Recipe/Hamburger-Steak-with-Onions-and-Gravy/Detail.aspx?evt19=1&referringHubId=446&scale=6&ismetric=0"
+	},
+	{
+		"meal": "Monday Side", 
+		"url": "http://allrecipes.com/Recipe/Artichoke-Stuffed-Mushrooms/Detail.aspx?event8=1&prop24=SR_Thumb&e11=stuffed%20mushrooms&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i8&scale=6&ismetric=0"
 	},
 	{
 		"meal": "Tuesday Main", 
-		"url": "http://allrecipes.com/Recipe/Simple-BBQ-Ribs/Detail.aspx?event8=1&prop24=SR_Thumb&e11=pork%20ribs&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p2i6"
-	},
-	{
-		"meal": "Tuesday Side", 
-		"url": "http://allrecipes.com/Recipe/Chef-Johns-Perfect-Mashed-Potatoes/Detail.aspx?event8=1&prop24=SR_Thumb&e11=mashed%20potatoes&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1"
+		"url": "http://allrecipes.com/Recipe/Cream-of-Broccoli-Soup-IV/Detail.aspx?evt19=1&referringHubId=14776",
+		"notes": "Get baguette for side, get 2 packs of sausage, ignore chicken broth"
 	},
 	{
 		"meal": "Wednesday Main", 
-		"url": "http://allrecipes.com/Recipe/Lances-French-Onion-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=french%20onion%20soup&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i2&scale=4&ismetric=0"
+		"url": "http://allrecipes.com/Recipe/Chef-Johns-Turkey-Sloppy-Joes/Detail.aspx?event8=1&prop24=SR_Thumb&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i14&scale=7&ismetric=0"
 	},
 	{
 		"meal": "Wednesday Side", 
-		"url": "http://allrecipes.com/Recipe/Easy-Cheesy-Garlic-Bread/Detail.aspx?event8=1&prop24=SR_Thumb&e11=garlic%20bread&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i12"
+		"url": "http://allrecipes.com/Recipe/Fresco-Salsa/Detail.aspx?event8=1&prop24=SR_Thumb&e11=salsa&e8=Quick%20Search&event10=1&e7=Home%20Page&soid=sr_results_p1i14",
+		"notes": "Get chips"
 	},
 	{
 		"meal": "Thursday Main", 
-		"url": "http://allrecipes.com/Recipe/Lemon-Chicken-Piccata/Detail.aspx?evt19=1&referringHubId=659&scale=2&ismetric=0"
+		"url": "http://allrecipes.com/Recipe/Beef-Tips/Detail.aspx?event8=1&prop24=SR_Thumb&e11=beef%20tips&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1&scale=5&ismetric=0",
+		"notes": "Get egg noodles"
 	},
 	{
 		"meal": "Thursday Side", 
-		"url": "http://allrecipes.com/Recipe/Baked-Asparagus-with-Balsamic-Butter-Sauce/Detail.aspx?evt19=1&referringHubId=81&scale=2&ismetric=0"
+		"url": "http://allrecipes.com/Recipe/Steamed-Broccoli/Detail.aspx?event8=1&prop24=SR_Thumb&e11=broccoli&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i6",
+		"notes": "ignore the bacon"
 	},
 	{
 		"meal": "Friday Main", 
-		"url": "http://allrecipes.com/Recipe/Pesto-Chicken-Florentine/Detail.aspx?evt19=1&referringHubId=659&scale=2&ismetric=0",
-		"notes": "Recipe says to use two chicken breasts, just use 1.5\nUse parmersan instead of romano cheese"
+		"url": "http://allrecipes.com/Recipe/BLT/Detail.aspx?event8=1&prop24=SR_Thumb&e11=blt&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1&scale=4&ismetric=0"
 	},
 	{
 		"meal": "Friday Side", 
-		"url": "http://allrecipes.com/Recipe/Mushrooms-with-a-Soy-Sauce-Glaze/Detail.aspx?evt19=1&referringHubId=81"
+		"url": "http://allrecipes.com/Recipe/Best-Baked-French-Fries/Detail.aspx?event8=1&prop24=SR_Thumb&e11=french%20fries&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i1&scale=2&ismetric=0"
 	},
 	{
 		"meal": "Saturday Main", 
-		"url": "http://allrecipes.com/Recipe/Chef-Johns-Macaroni-and-Cheese/Detail.aspx?event8=1&prop24=SR_Thumb&e11=macaroni%20and%20cheese&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i4&scale=4&ismetric=0"
+		"url": "http://allrecipes.com/Recipe/California-Grilled-Veggie-Sandwich/Detail.aspx?evt19=1&referringHubId=1059&scale=8&ismetric=0"
 	},
 	{
-		"meal": "Saturday Side 1", 
-		"url": "http://allrecipes.com/Recipe/Grilled-Potatoes-and-Onion/Detail.aspx?evt19=1&referringHubId=917",
-		"notes": "Also use the other half of the asparagus as well"
+		"meal": "Saturday Side", 
+		"url": "http://allrecipes.com/Recipe/Acorn-Squash/Detail.aspx?event8=1&prop24=SR_Thumb&e11=acorn%20squash&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i1"
 	}
-
 ]}
