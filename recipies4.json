@@ -1,0 +1,56 @@
+{ 
+	"recipies": [
+		{
+			"meal": "Monday Main", 
+			"url": "http://allrecipes.com/Recipe/Steak-Subs/Detail.aspx?event8=1&prop24=SR_Thumb&e11=steak&e8=Quick%20Search&event10=1&e7=Recipe%20Search%20Results&soid=sr_results_p1i19",
+			"notes": "Also cook the leftover vegetables for toppings"
+		},
+		{
+			"meal": "Monday Side", 
+			"notes": "Curly Fries in the Freezer"
+		},
+		{
+			"meal": "Tuesday Main", 
+			"url": "http://allrecipes.com/Recipe/Slow-Cooker-Pulled-Pork/Detail.aspx?event8=1&prop24=SR_Thumb&e11=slow%20cooker%20pulled%20pork&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i1",
+			"notes": "Use half of the pork shoulder"
+		},
+		{
+			"meal": "Tuesday Side", 
+			"notes": "Mac and Cheese"
+		},
+		{
+			"meal": "Thursday Main", 
+			"url": "http://allrecipes.com/Recipe/Slow-Cooker-Carnitas-from-Old-El-Paso/Detail.aspx?event8=1&prop24=SR_Thumb&e11=pork%20enchiladas&e8=Quick%20Search&event10=1&e7=Recipe%20Search%20Results&soid=sr_results_p1i8&scale=4&ismetric=0",
+			"notes": "Use green salsa instead of enchilada sauce"
+		},
+		{
+			"meal": "Thursday Side",
+			"url": "http://allrecipes.com/Recipe/Guacamole/Detail.aspx?event8=1&prop24=SR_Thumb&e11=guacamole&e8=Quick%20Search&event10=1&e7=Recipe%20Search%20Results&soid=sr_results_p1i1"
+		},
+		{
+			"meal": "Friday Main", 
+			"url": "http://allrecipes.com/Recipe/Butternut-and-Acorn-Squash-Soup/Detail.aspx?event8=1&prop24=SR_Title&e11=acorn%20squash&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i3"
+		},
+		{
+			"meal": "Friday Side", 
+			"url": "http://allrecipes.com/Recipe/Garlic-and-Herb-Pull-Apart-Bread/Detail.aspx?event8=1&prop24=SR_Thumb&e11=pull%20apart%20cheese%20bread&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i6"
+		},
+		{
+			"meal": "Saturday Main", 
+			"url": "http://allrecipes.com/Recipe/Easy-Tuna-Casserole/Detail.aspx?evt19=1&referringHubId=17515"
+		},
+		{
+			"meal": "Saturday Side", 
+			"url": "http://allrecipes.com/Recipe/Garlic-Kale/Detail.aspx?event8=1&prop24=SR_Thumb&e11=garlic%20kale&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i1",
+			"notes": "Make it according to the directions on the bag, with chicken stock"
+		}
+	],
+	"ingredients": [
+		"Mayo",
+		"Bleach",
+		"Corn Chips",
+		"Mac and cheese",
+		"garlic",
+		"green salsa (for carnitas)"
+	]
+}

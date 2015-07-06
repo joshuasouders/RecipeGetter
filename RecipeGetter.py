@@ -38,7 +38,8 @@ produce_list = [
     "lemon",
     "asparagus",
     "spinach",
-    "squash"
+    "squash",
+    "kale"
 ]
 
 produce_exception_list = [
@@ -64,7 +65,8 @@ meat_list = [
     "bacon",
     "chicken",
     "pork",
-    "turkey"
+    "turkey",
+    "steak"
 ]
 
 meat_exception_list = [
@@ -83,7 +85,7 @@ refrigerated_list = [
 ]
 
 refrigerated_exception_list = [
-
+    "mac and cheese"
 ]
 
 middle_list = [
@@ -129,7 +131,21 @@ middle_list = [
     "buns",
     "artichoke hearts",
     "gravy mix",
-    "mayonnaise"
+    "mayonnaise",
+    "roll",
+    "root beer",
+    "barbecue sauce",
+    "taco seasoning",
+    "enchilada sauce",
+    "green chiles",
+    "cinnamon",
+    "dried rosemary",
+    "biscuit dough",
+    "tuna",
+    "mayo",
+    "bleach",
+    "chips",
+    "mac and cheese"
 ]
 
 middle_exception_list = [
@@ -167,7 +183,10 @@ ignore_list = [
 
 ignore_exceptions_list = [
     "bell pepper",
-    "buttermilk"
+    "buttermilk",
+    "flour tortillas",
+    "butternut",
+    
 ]
 
 def categorize(ingredient, quantity, meal):
@@ -212,41 +231,52 @@ def filter_check(ingredient, quantity, meal):
 def getCategorization(item):
     return item[4]
 
-with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as recipies_file:
+with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies4.json') as recipies_file:
     data = json.load(recipies_file)
     for recipe in data["recipies"]:
         print "==========="
         print "Importing recipe - " + recipe["meal"]
-        soup = BeautifulSoup(urllib2.urlopen(recipe["url"]).read())
-        print ""
-        print "Loaded recipe"
-        print ""
+        if "url" in recipe:
+            soup = BeautifulSoup(urllib2.urlopen(recipe["url"]).read().decode('utf-8', 'ignore'))
+            print ""
+            print "Loaded recipe"
+            print ""
 
-        htmlstr += "<h3>" + recipe["meal"] + ":&nbsp<a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h3>"
-        if 'notes' in recipe:
-            htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
-        ingredients = soup.find_all(id="liIngredient")
+            htmlstr += "<h3>" + recipe["meal"] + ":&nbsp<a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h3>"
+            if 'notes' in recipe:
+                htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
+            ingredients = soup.find_all(id="liIngredient")
+            
+            for i in range(len(ingredients)):
+                quantity = ingredients[i].label.p.find(id="lblIngAmount")
+                ingredient = ingredients[i].label.p.find(id="lblIngName")
+
+                if quantity is None:
+                    quantity = ""
+                else:
+                    quantity = quantity.get_text()
+                    
+                if ingredient is None:
+                    ingredient = ""
+                else:
+                    ingredient = ingredient.get_text().lower()
+
+                if (len(quantity.strip()) + len(ingredient.strip())) != 0:
+                    #print quantity + "|" + ingredient
+                    #print ingredient
+                    #print quantity
+                    print "Categorizing " + ingredient
+                    filter_check(ingredient, quantity, recipe["meal"])
+
+            print ""
+            print "Categorization Successful"
+            print ""
+        else:
+            htmlstr += "<h3>" + recipe["meal"] + ":&nbsp" + recipe["notes"] + "</h3>"
         
-        for i in range(len(ingredients)):
-            quantity = ingredients[i].label.p.find(id="lblIngAmount")
-            ingredient = ingredients[i].label.p.find(id="lblIngName")
-
-            if quantity is None:
-                quantity = ""
-            else:
-                quantity = quantity.get_text()
-                
-            if ingredient is None:
-                ingredient = ""
-            else:
-                ingredient = ingredient.get_text()
-
-            if (len(quantity.strip()) + len(ingredient.strip())) != 0:
-                #print quantity + "|" + ingredient
-                #print ingredient
-                #print quantity
-                print "Categorizing " + ingredient
-                filter_check(ingredient, quantity, recipe["meal"])
+    for ingredient in data["ingredients"]:
+        print "Categorizing " + ingredient
+        filter_check(ingredient.lower(), "N/A", "Extra Ingredient")
 
         print ""
         print "Categorization Successful"
@@ -285,40 +315,43 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies3.json') as rec
     htmlstr += "</table><div style=\"text-align:center\">"
 
     for recipe in data["recipies"]:
-        soup = BeautifulSoup(urllib2.urlopen(recipe["url"]).read())
-        htmlstr += "<h1><a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h1><h3>(" + recipe["meal"] + ")</h3>"
-        htmlstr += soup.find(id="ulReadyTime").get_text()
-        if 'notes' in recipe:
-            htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
-        htmlstr += "<h3>Ingredients</h3><div class=\"ingredients\">"
-        
-        ingredients = soup.find_all(id="liIngredient")
-        
-        for i in range(len(ingredients)):
-            quantity = ingredients[i].label.p.find(id="lblIngAmount")
-            ingredient = ingredients[i].label.p.find(id="lblIngName")
+        if "url" in recipe:
+            soup = BeautifulSoup(urllib2.urlopen(recipe["url"]).read().decode('utf-8', 'ignore'))
+            htmlstr += "<h1><a href=\"" + recipe["url"] + "\">" + soup.find(id="itemTitle").get_text() + "</a></h1><h3>(" + recipe["meal"] + ")</h3>"
+            htmlstr += soup.find(id="ulReadyTime").get_text()
+            if 'notes' in recipe:
+                htmlstr += "<h4>Notes: " + recipe["notes"] + "</h4>"
+            htmlstr += "<h3>Ingredients</h3><div class=\"ingredients\">"
+            
+            ingredients = soup.find_all(id="liIngredient")
+            
+            for i in range(len(ingredients)):
+                quantity = ingredients[i].label.p.find(id="lblIngAmount")
+                ingredient = ingredients[i].label.p.find(id="lblIngName")
 
-            if quantity is None:
-                quantity = ""
-            else:
-                quantity = quantity.get_text()
-                
-            if ingredient is None:
-                ingredient = ""
-            else:
-                ingredient = ingredient.get_text()
+                if quantity is None:
+                    quantity = ""
+                else:
+                    quantity = quantity.get_text()
+                    
+                if ingredient is None:
+                    ingredient = ""
+                else:
+                    ingredient = ingredient.get_text()
 
-            if (len(quantity.strip()) + len(ingredient.strip())) != 0:
-                htmlstr += quantity + " " + ingredient + "<br>"
+                if (len(quantity.strip()) + len(ingredient.strip())) != 0:
+                    htmlstr += quantity + " " + ingredient + "<br>"
 
-        htmlstr += "</div>"
-        
-        for tag in soup.find_all("div", class_="directions"):
-            htmlstr += str(tag)
+            htmlstr += "</div>"
+            for tag in soup.find_all("div", class_="directions"):
+                htmlstr += str(tag).decode('utf8')
+        else:
+            htmlstr += "<h1>" + recipe["notes"] + "</h1><h3>(" + recipe["meal"] + ")</h3>"
+
 
     htmlstr += "</div><script>$('.table').on('click','tbody tr',function(event){if($(this).hasClass('highlight')){$(this).removeClass('highlight');}else{$(this).addClass('highlight')}});</script></body></html>"
-    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe3.html","w")
-    html_file.write(htmlstr)
+    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe4.html","w")
+    html_file.write(htmlstr.encode("UTF-8", 'ignore'))
     html_file.close()
     print "Recipies written to HTML file"
 
