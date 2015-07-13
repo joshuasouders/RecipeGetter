@@ -48,6 +48,7 @@ produce_exception_list = [
     "cornmeal",
     "tomato juice",
     "frozen spinach",
+    "frozen chopped spinach",
     "dried parsley"
 ]
 
@@ -81,7 +82,8 @@ refrigerated_list = [
     "sour cream",
     "egg",
     "half-and-half",
-    "margarine"
+    "margarine",
+    "refrigerated pizza crust"
 ]
 
 refrigerated_exception_list = [
@@ -130,7 +132,7 @@ middle_list = [
     "cocoa",
     "buns",
     "artichoke hearts",
-    "gravy mix",
+    "gravy",
     "mayonnaise",
     "roll",
     "root beer",
@@ -145,7 +147,11 @@ middle_list = [
     "mayo",
     "bleach",
     "chips",
-    "mac and cheese"
+    "mac and cheese",
+    "salad dressing",
+    "anchovy",
+    "trash bags",
+    "toothbrush"
 ]
 
 middle_exception_list = [
@@ -178,7 +184,9 @@ ignore_list = [
     "dried parsley",
     "vegetable oil",
     "dried thyme",
-    "white vinegar"
+    "white vinegar",
+    "paprika",
+    "italian herb seasoning"
 ]
 
 ignore_exceptions_list = [
@@ -231,7 +239,7 @@ def filter_check(ingredient, quantity, meal):
 def getCategorization(item):
     return item[4]
 
-with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies4.json') as recipies_file:
+with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies5.json') as recipies_file:
     data = json.load(recipies_file)
     for recipe in data["recipies"]:
         print "==========="
@@ -350,7 +358,7 @@ with open('C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipies4.json') as rec
 
 
     htmlstr += "</div><script>$('.table').on('click','tbody tr',function(event){if($(this).hasClass('highlight')){$(this).removeClass('highlight');}else{$(this).addClass('highlight')}});</script></body></html>"
-    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe4.html","w")
+    html_file = open("C:/Users/jsouders.DOIT/Documents/RecipeGetter/recipe5.html","w")
     html_file.write(htmlstr.encode("UTF-8", 'ignore'))
     html_file.close()
     print "Recipies written to HTML file"

@@ -1,0 +1,57 @@
+{ 
+	"recipies": [
+		{
+			"meal": "Monday Main", 
+			"url": "http://allrecipes.com/Recipe/Easy-Shake-and-Bake-Chicken/Detail.aspx?evt19=1&referringHubId=12156&scale=2&ismetric=0"
+		},
+		{
+			"meal": "Monday Side", 
+			"url": "http://allrecipes.com/Recipe/Garlic-Kale/Detail.aspx?event8=1&prop24=SR_Thumb&e11=garlic%20kale&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i1",
+			"notes": "Make it according to the directions on the bag, with chicken stock"
+		},
+		{
+			"meal": "Tuesday Main", 
+			"notes": "Bagel Sandwich"
+		},
+		{
+			"meal": "Tuesday Side", 
+			"notes": "Dinty Moore"
+		},
+		{
+			"meal": "Wednesday Main", 
+			"url": "http://allrecipes.com/Recipe/Gourmet-Chicken-Pizza/Detail.aspx?event8=1&prop24=SR_Thumb&e11=chicken%20pizza&e8=Quick%20Search&event10=1&e7=Recipe%20Search%20Results&soid=sr_results_p1i3",
+			"notes": "Only use 1 chicken breast"
+		},
+		{
+			"meal": "Wednesday Side", 
+			"url": "http://allrecipes.com/Recipe/Romaine-with-Garlic-Lemon-Anchovy-Dressing-2/Detail.aspx?evt19=1&referringHubId=16350"
+		},
+		{
+			"meal": "Thursday Main", 
+			"url": "http://allrecipes.com/Recipe/Italian-Breaded-Pork-Chops/Detail.aspx?evt19=1&referringHubId=15522"
+		},
+		{
+			"meal": "Thursday Side", 
+			"url": "http://allrecipes.com/Recipe/Basic-Mashed-Potatoes/Detail.aspx?event8=1&prop24=SR_Thumb&e11=mashed%20potatoes&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i15",
+			"notes": "Also make gravy packet"
+		},
+		{
+			"meal": "Friday Main", 
+			"url": "http://allrecipes.com/Recipe/Crunchy-Eggplant-Parmesan/Detail.aspx?event8=1&prop24=SR_Thumb&e11=eggplant%20parmesan&e8=Quick%20Search&event10=1&e7=Recipe&soid=sr_results_p1i2&scale=4&ismetric=0"
+		},
+		{
+			"meal": "Saturday Main", 
+			"url": "http://allrecipes.com/Recipe/Creamy-Mushroom-Soup/Detail.aspx?event8=1&prop24=SR_Thumb&e11=mushroom%20soup&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i11"
+		},
+		{
+			"meal": "Saturday Side", 
+			"url": "http://allrecipes.com/Recipe/Creamed-Spinach-2/Detail.aspx?event8=1&prop24=SR_Thumb&e11=creamed%20spinach&e8=Quick%20Search&event10=1&e7=Recipe%20Hub&soid=sr_results_p1i2&scale=4&ismetric=0",
+			"notes": "Make it according to the directions on the bag, with chicken stock"
+		}
+	],
+	"ingredients": [
+		"Gravy (for Thursday Side)",
+		"trash bags",
+		"toothbrush"
+	]
+}
